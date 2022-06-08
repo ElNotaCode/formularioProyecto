@@ -1,0 +1,170 @@
+<div class="container text">
+  <div class="my-3 p-3 bg-body rounded shadow-sm">
+    <form>
+      <!--TEXT-->
+      <div class="form-group row my-3">
+        <label for="nombre" class="col-sm-2 col-form-label align-self-center"
+          >Text</label
+        >
+        <div class="col-sm-10 align-self-center">
+          <input
+            type="text"
+            class="form-control"
+            id="text"
+            name="text"
+            placeholder="Introduce tu texto"
+            [(ngModel)]="text"
+          />
+        </div>
+      </div>
+      <!--STATIC-->
+      <div class="form-group row my-3">
+        <label for="static" class="col-sm-2 col-form-label align-self-center"
+          >Static</label
+        >
+        <div class="col-sm-10 align-self-center">
+          <input
+            type="text"
+            readonly
+            class="form-control-plaintext"
+            id="static"
+            name="static"
+            value="{{ static }}"
+          />
+        </div>
+      </div>
+      <!--SPASWORD-->
+      <div class="form-group row my-3">
+        <label
+          for="inputPassword"
+          class="col-sm-2 col-form-label align-self-center"
+          >Password</label
+        >
+        <div class="col-sm-10 align-self-center">
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Password"
+            [(ngModel)]="password"
+          />
+        </div>
+      </div>
+      <!--TEXTAREA-->
+      <div class="form-group row my-3">
+        <label for="textArea" class="col-sm-2 col-form-label align-self-center"
+          >TextArea</label
+        >
+        <div class="col-sm-10 align-self-center">
+          <textarea
+            class="form-control"
+            id="textArea"
+            name="textArea"
+            rows="3"
+            placeholder="Introduce tu mensaje."
+            [(ngModel)]="textArea"
+          ></textarea>
+        </div>
+      </div>
+      <!--CHECKBOX-->
+      <div class="form-group row my-3">
+        <div class="col-sm-2 col-form-label align-self-center">Checkbox</div>
+        <div class="col-sm-10 align-self-center">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="defaultCheck1"
+            />
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="defaultCheck2"
+              disabled
+            />
+            <label class="form-check-label" for="defaultCheck2">
+              Disabled checkbox
+            </label>
+          </div>
+        </div>
+      </div>
+      <!--RADIOBUTTON-->
+      <div class="form-group row my-3">
+        <div class="col-sm-2 col-form-label align-self-center">Radiobutton</div>
+        <div class="col-sm-10 align-self-center">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios"
+              id="exampleRadios1"
+              value="option1"
+              checked
+            />
+            <label class="form-check-label" for="exampleRadios1">
+              Default radio
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios"
+              id="exampleRadios2"
+              value="option2"
+            />
+            <label class="form-check-label" for="exampleRadios2">
+              Second default radio
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios"
+              id="exampleRadios3"
+              value="option3"
+              disabled
+            />
+            <label class="form-check-label" for="exampleRadios3">
+              Disabled radio
+            </label>
+          </div>
+        </div>
+      </div>
+      <!--SELECT-->
+      <div class="form-group my-3">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <!--VALIDAR-->
+      <div *ngIf="validar == true" class="row my-3">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+          <p class="h6 text-danger">
+            Este elemento indica al usuario si el campo no cumple con los
+            requisitos.
+          </p>
+        </div>
+      </div>
+      <!--BUTTON-->
+      <button class="btn btn-primary mt-4" (click)="enviarFormulario()">
+        Enviar
+      </button>
+    </form>
+  </div>
+</div>
