@@ -1,9 +1,10 @@
 <div class="container text">
+  <p class="h3 my-3">FORMULARIO</p>
   <div class="my-3 p-3 bg-body rounded shadow-sm">
     <form>
       <!--TEXT-->
       <div class="form-group row my-3">
-        <label for="nombre" class="col-sm-2 col-form-label align-self-center"
+        <label for="text" class="col-sm-2 col-form-label align-self-center"
           >Text</label
         >
         <div class="col-sm-10 align-self-center">
@@ -65,6 +66,20 @@
             placeholder="Introduce tu mensaje."
             [(ngModel)]="textArea"
           ></textarea>
+        </div>
+      </div>
+      <!--DATEPICKER-->
+      <div class="row my-3">
+        <div class="col-sm-2">Fecha de DATEPICKER:</div>
+        <div class="col-sm-10">
+          <div class="input-group date" data-provide="datepicker">
+            <input
+              id="startDate"
+              name="startDate"
+              class="form-control"
+              type="date"
+            />
+          </div>
         </div>
       </div>
       <!--CHECKBOX-->
